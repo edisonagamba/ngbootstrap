@@ -1,0 +1,11 @@
+<h1>Toast</h1>
+<hr>
+<button class="btn btn-warning btn-small" (click)="aparecerToast(true)">Mostrar toast</button>
+<hr *ngIf="mostrar">
+<ngb-toast 
+*ngIf="mostrar" 
+class="bg-danger text-light" 
+header="Cabezote toast"
+(hide)="aparecerToast(false)">
+    Aqui el contenido
+</ngb-toast>

@@ -1,0 +1,109 @@
+<h1>Dropdown</h1>
+<hr>
+<div class="row">
+    <div class="col-6">
+<div ngbDropdown class="d.inline.block">
+    <button class="btn btn-success" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="midrop1">
+        <button ngbDropdownItem>item 1</button>
+        <button ngbDropdownItem>item 2</button>
+        <button ngbDropdownItem>item 3</button>
+    </div>
+</div>
+    </div>
+
+    <div class="col-6">
+        <div ngbDropdown class="d.inline.block" placement="left">
+            <button class="btn btn-danger" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-4">
+        <div ngbDropdown #mimenu="ngbDropdown" class="d.inline.block" placement="top">
+            <button class="btn btn-danger" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>
+    </div>  
+    <div class="col-4">
+        <button class="btn btn-outline-primary" (click)="mimenu.open();">Abrir fuera</button>
+    </div> 
+    <div class="col-4">
+        <button class="btn btn-outline-warning" (click)="mimenu.close()">Cerrar fuera</button>
+    </div> 
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col 6">
+        <div ngbDropdown class="btn-group" role="group" placement="bottom">
+            <button type="button" class="btn btn-secondary">Dividido</button>
+            <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle id="midrop1"></button>
+            <div ngbDropdownMenu aria-labelledby="midrop1">
+                <button ngbDropdownItem>item 1</button>
+                <button ngbDropdownItem>item 2</button>
+                <button ngbDropdownItem>item 3</button>
+            </div>
+        </div>  
+    </div>
+    <div class="col 6">
+<div class="btn-group">
+    <div ngbDropdown class="btn-group" role="group" placement="bottom">
+        <button class="btn btn-outline-warning" ngbDropdownToggle id="midrop1">Abreme</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <button ngbDropdownItem>item 1</button>
+            <button ngbDropdownItem>item 2</button>
+            <button ngbDropdownItem>item 3</button>
+        </div>
+    </div>
+    <div ngbDropdown class="btn-group" role="group" placement="bottom">
+        <button class="btn btn-outline-primary" ngbDropdownToggle id="midrop1">mejor a mi</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <button ngbDropdownItem>item 1</button>
+            <button ngbDropdownItem>item 2</button>
+            <button ngbDropdownItem>item 3</button>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+  <hr>
+  <div class="row">
+    <div ngbDropdown class="d.inline.block" placement="right">
+        <button class="btn btn-outline-success" ngbDropdownToggle id="midrop1">Mi dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="midrop1">
+            <form class="px-4 py-3">
+                <div class="form-group">
+                  <label for="exampleDropdownFormEmail1">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleDropdownFormPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                  <label class="form-check-label" for="dropdownCheck">
+                    Recuerdame
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+              </form>
+              <hr>
+              <button ngbDropdownItem>Registrar</button>
+              <button ngbDropdownItem>Olvidé mi contraseña</button>
+        </div>
+    </div> 
+  </div>

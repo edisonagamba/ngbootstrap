@@ -1,0 +1,28 @@
+<h3>Accordion</h3>
+<hr>
+<ngb-accordion #acc="ngbAccordion" (panelChange)=nomodificar($event)>
+    <ngb-panel id="panel1" title="Tema1">
+        <ng-template ngbPanelContent>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ratione eaque voluptatibus error animi quaerat delectus maiores saepe, nemo, inventore nobis omnis, consequuntur asperiores odit non aliquid quo? Maiores, nam.
+        </ng-template>
+    </ngb-panel>
+    <ngb-panel id="panel2">
+        <ng-template ngbPanelTitle>
+            <h1> <span>Tema</span> 2</h1>
+        </ng-template>
+        <ng-template ngbPanelContent>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ratione eaque voluptatibus error animi quaerat delectus maiores saepe, nemo, inventore nobis omnis, consequuntur asperiores odit non aliquid quo? Maiores, nam.
+        </ng-template>
+    </ngb-panel>
+    <ngb-panel id="panel3" title="Tema3" [disabled]="false">
+        <ng-template ngbPanelContent>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ratione eaque voluptatibus error animi quaerat delectus maiores saepe, nemo, inventore nobis omnis, consequuntur asperiores odit non aliquid quo? Maiores, nam.
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>
+
+<hr>
+<button class="btn btn-primary mr-2" (click)="acc.toggle('panel1')">panel 1</button>
+<button class="btn btn-secondary mr-2" (click)="acc.toggle('panel2')">panel 2</button>
+<button class="btn btn-success mr-2" (click)="acc.expandAll()">Abrir</button>
+<button class="btn btn-warning mr-2" (click)="acc.collapseAll()">Cerrar</button>

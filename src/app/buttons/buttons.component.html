@@ -1,0 +1,77 @@
+<h1>Buttons</h1>
+<hr>
+<button>boton</button>
+<hr>
+<div class="row">
+    <div class="col-6">
+        <!-- checkbox -->
+<h5>Checkbox</h5>
+<div class="btn-group btn-group-toggle">   
+    <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="modelo.boton1">Botón 1
+    </label>
+    <label class="btn-success" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="modelo.boton2">Botón 2
+    </label>
+</div>
+<pre>{{modelo|json}}</pre>
+    </div>
+    <div class="col-6">
+        <!-- radio -->
+        <h5>Radio</h5>
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBtn" [(ngModel)]="model">
+    <label class="btn-warning" ngbButtonLabel>
+        <input type="radio" value="true" ngbButton>Boton 3
+    </label>
+    <label class="btn-danger" ngbButtonLabel>
+        <input type="radio" [value]="30" ngbButton>Boton 4
+    </label>
+</div>
+<pre>{{model|json}}</pre>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-6">
+<!-- reactive checkbox -->
+<h5>reactive checkbox</h5>
+<form [formGroup]="checkboxGroup">
+    <div class="btn-group btn-group-toggle">   
+        <label class="btn-primary" ngbButtonLabel>
+            <input type="checkbox" ngbButton formControlName="boton1">Botón 1
+        </label>
+        <label class="btn-success" ngbButtonLabel>
+            <input type="checkbox" ngbButton formControlName="boton2">Botón 2
+        </label>
+    </div>
+    <pre>{{checkboxGroup.value | json}}</pre>
+</form>
+
+</div>
+
+
+
+
+
+
+    <div class="col-6">
+        <!-- reactive radio -->
+        <h5>reactive radio</h5>
+<form [formGroup]="radioGroup">
+    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBtn" formControlName="radioModel">
+        <label class="btn-warning" ngbButtonLabel>
+            <input type="radio" value="correcto" ngbButton>Boton 3
+        </label>
+        <label class="btn-danger" ngbButtonLabel>
+            <input type="radio" [value]="55" ngbButton>Boton 4
+        </label>
+    </div>
+    <pre>{{radioGroup.value['radioModel']}}</pre>
+</form>
+
+    </div>
+</div>
+
+
+
+
